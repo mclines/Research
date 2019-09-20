@@ -15,7 +15,7 @@ def speed_test():
             errors = []
             for round in range(100):
                 t0 = time.time()
-                approx_value, coef = moving_ls.main(nodes, labels, eval_node, degree)
+                approx_value, coef = moving_ls.main(nodes, labels, eval_node, degree, full = True)
                 t1 = time.time()
                 eval_time = t1-t0
                 actual_value = runge(eval_node)[0]
